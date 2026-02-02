@@ -1,0 +1,43 @@
+{
+  "name": "irol",
+  "version": "1.0.0",
+  "description": "IROL is designed as an Intelligent Request Orchestration Layer to facilitate smart, adaptive communication between clients and servers in distributed systems. It introduces a middleware-based approach where servers act as providers by injecting metadata into HTTP responses, such as available communication upgrades (e.g., short-polling, long-polling, WebSockets), while clients as receivers can specify request-level configurations in headers. Based on the client's config (e.g., criticality, frequency), the server suggests suitable upgrades, enabling dynamic negotiation of communication methods. The client can then choose to upgrade its request handling accordingly, all managed seamlessly between IROL's client and server layers without disturbing the core application codebase. This allows for intelligent orchestration like protocol switching, load balancing, or adaptive polling without altering existing logic. The layer aims to be lightweight, easy to integrate like standard middleware, and extensible for various orchestration strategies.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeepanshuPratik/IROL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeepanshuPratik/IROL/issues"
+  },
+  "homepage": "https://github.com/DeepanshuPratik/IROL#readme",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.1.0",
+    "@types/ws": "^8.18.1",
+    "jest": "^30.2.0",
+    "rimraf": "^6.1.2",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "axios": "^1.13.4",
+    "isomorphic-ws": "^5.0.0",
+    "winston": "^3.19.0",
+    "ws": "^8.19.0"
+  }
+}
